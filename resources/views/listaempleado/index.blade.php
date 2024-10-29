@@ -1,3 +1,4 @@
+@role('admin')
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.1/css/buttons.dataTables.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css">
@@ -63,6 +64,11 @@
         </div>
     </div>
 </x-app-layout>
+@else
+    <div class="alert alert-danger">
+        <strong>Acceso denegado:</strong> No tienes permiso para acceder a esta sección.
+    </div>
+@endif
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <!-- DataTables JS -->

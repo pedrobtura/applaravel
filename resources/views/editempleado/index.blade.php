@@ -1,3 +1,4 @@
+@role('admin')
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
 <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/main.min.css' rel='stylesheet' />
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -234,3 +235,8 @@
     </style>
     
 </x-app-layout>
+@else
+    <div class="alert alert-danger">
+        <strong>Acceso denegado:</strong> No tienes permiso para acceder a esta sección.
+    </div>
+@endif
